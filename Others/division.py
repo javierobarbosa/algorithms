@@ -1,4 +1,4 @@
-#The following code performs integer division
+# The following code performs integer division
 
 def division (a, b):
     count = 0
