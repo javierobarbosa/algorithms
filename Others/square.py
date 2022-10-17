@@ -1,11 +1,11 @@
 # The following code computes the [integer] square root of a number.
 # If the number is not a perfect square (there is no integer square root), then it returns -1.
 
-def calculate_square(n: int):
+def calculate_square(n: int) -> int:
     return square_helper(n, 1, n)
 
 
-def square_helper(n: int, min: float, max: float):
+def square_helper(n: int, min: float, max: float) -> int:
     if max < min:
         return -1
     guess = (min + max) // 2
