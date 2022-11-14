@@ -7,8 +7,10 @@ class Solution:
         duplicates = {}
         for i in range(len(s)):
             if s[i] in duplicates:
+                # If char is already within the window, the update the window start pointer
                 if start <= duplicates[s[i]]:
                     start = duplicates[s[i]] + 1
+                # Char is out of the window, does not count as duplicated, just increment the count
                 else:
                     max_substring = max(max_substring, i - start + 1)
             else:
