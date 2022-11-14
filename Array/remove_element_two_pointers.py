@@ -46,9 +46,10 @@ if __name__ == "__main__":
     so = Solution()
     # nums = [0, 1, 0, 3, 12]
     # nums = [0]
-    arr_1 = [0, 1, 2, 2, 3, 0, 4, 2]
+    arr_1 = [-1,0,0,0,0,3,3]
     k = 2
     # print(so.remove_element(arr_1, k))
-    arr_2 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
-    print(so.remove_duplicates_2(arr_2))
+    arr_2 = [-1,0,0,0,0,3,3]
+    print(so.remove_duplicates(arr_1))
+    # print(so.remove_duplicates_2(arr_2))
 
