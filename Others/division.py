@@ -10,5 +10,5 @@ def division (a, b):
 
 
 if __name__ == "__main__":
-    a, b = (150, 10)
+    a, b = (150, 14)
     print(division(a,b))
