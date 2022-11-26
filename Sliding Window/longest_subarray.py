@@ -5,28 +5,29 @@ class Solution:
     def get_length_longest_substring_1(self, s: str) -> int:
         max_substring = start = 0
         duplicates = {}
-        for i in range(len(s)):
-            if s[i] in duplicates:
+        for end in range(len(s)):
+            if s[end] in duplicates:
                 # If char is already within the window, the update the window start pointer
-                if start <= duplicates[s[i]]:
-                    start = duplicates[s[i]] + 1
+                if start <= duplicates[s[end]]:
+                    start = duplicates[s[end]] + 1
                 # Char is out of the window, does not count as duplicated, just increment the count
                 else:
-                    max_substring = max(max_substring, i - start + 1)
+                    max_substring = max(max_substring, end - start + 1)
+                # to get the len of the substring adding +1 as end is initialized with 0 to count the item iterated
             else:
-                max_substring = max(max_substring, i - start + 1)
-            duplicates[s[i]] = i
+                max_substring = max(max_substring, end - start + 1)
+            duplicates[s[end]] = end
         return max_substring
 
     def get_length_longest_substring_2(self, s: str) -> int:
         start = max_substring = 0
         duplicates = {}
-        for i in range(len(s)):
-            if s[i] in duplicates and start <= duplicates[s[i]]:
-                start = duplicates[s[i]] + 1
+        for end in range(len(s)):
+            if s[end] in duplicates and start <= duplicates[s[end]]:
+                start = duplicates[s[end]] + 1
             else:
-                max_substring = max(max_substring, i - start + 1)
-            duplicates[s[i]] = i
+                max_substring = max(max_substring, end - start + 1)
+            duplicates[s[end]] = end
         return max_substring
 
 
