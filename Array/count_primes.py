@@ -1,5 +1,6 @@
 """
 Time - O(nloglogn) or O(log(log(n)))  Space - O(n)
+sum() has time O(N)
 Given an integer n, return the number of prime numbers that are strictly less than n.
 """
 from typing import List
