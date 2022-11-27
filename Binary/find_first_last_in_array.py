@@ -47,7 +47,10 @@ class SolutionV1:
 
 class SolutionV2:
     def search_range(self, nums: List[int], target: int) -> List[int]:
-        # function to get the lowest index based on target
+        # function to get the lowest index based on target (First Bad Version problem)
+        # key1: while start < end (single element)
+        # key2: update end, end = mid  (not 'end = mid-1') end = mid could be te first version of target
+
         def binary_search(target: int) -> int:
             start, end = 0, len(nums)
             while start < end:
@@ -72,5 +75,3 @@ if __name__ == "__main__":
     t = 8
     print(so1.search_range(arr, t))
     print(so2.search_range(arr, t))
-
-    #print(so.search_range_v2(arr, t))
