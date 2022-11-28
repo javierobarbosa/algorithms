@@ -1,5 +1,10 @@
-# Given an array of strings strs, group the anagrams together.
-# An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase.
+"""
+- Hash Map with sorted --> Time O(N Log(N)) Space  O(N)
+- Hash Map without sorted --> Time O(N * M) = O(N) Space  O(N)
+Given an array of strings strs, group the anagrams together.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase.
+"""
+
 from typing import List
 from collections import defaultdict
 
