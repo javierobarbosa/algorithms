@@ -1,4 +1,4 @@
-# Time O(N) Space O(1)
+# Time O(N) Space O(N)
 # Given an array of integers nums and an integer target,
 # Return indices of the two numbers such that they add up to target.
 from typing import List
