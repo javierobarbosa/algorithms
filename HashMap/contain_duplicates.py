@@ -1,7 +1,7 @@
 """
 Approach 1: sorted the array and look for previous is equal to the arr[i] --> Time O(N Log(N))
 Approach 2: using set() and compare with len of the array --> Time O(N) Space O(N)
-Approach 3: using dict - hash map --> Time O(N) Space O(N)
+Approach 3: using dict - hash map --> Time O(N) Space O(1)
 
 -- To use as interview
 
