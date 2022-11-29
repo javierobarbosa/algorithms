@@ -72,11 +72,13 @@ def get_min_max_diff(arr: list[int], k: int) -> int:
 
 # Find the longest substring of a string containing ‘k’ distinct characters
 def get_longest(s: str, k: int) -> str:
+    # window pointers
     high = low = 0
+    # max substring pointers
     start = end = 0
     windows = set()
     freq = [0] * 26
-
+    # k=3, bbbccde freq[b]=5; bcbabbbd; freq[b]=4, cbabbbd freq[b]=3, bbbd ->> d
     while high < len(s):
         windows.add(s[high])
         freq[ord(s[high]) - ord('a')] += 1
