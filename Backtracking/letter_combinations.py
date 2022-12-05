@@ -2,6 +2,7 @@
 Iterative: Time O(N³), Space O(N³)
 Recursive: Time O(N * 2^N), Space O(N * 2^N)
 
+Given a string containing digits from 2-9 inclusive, return all possible letter combinations.
 """
 from typing import List, Dict
 
