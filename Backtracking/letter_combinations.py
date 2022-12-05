@@ -30,15 +30,19 @@ class Solution:
             result = temp
         return result
 
-    def backtracking(self, digits: str, result: List[str], lookup: Dict, combinations: str, idx: int ):
+    def backtracking(self, digits: str, result: List[str], lookup: Dict, combinations: str, idx: int):
+        # return condition
         if idx > len(digits):
             return
+        # collect subset
         if len(combinations) == len(digits):
             # As combinations is string, copy using list() does not work use slicing instead -> [:]
             result.append(combinations[:])
             return
         current_digit = digits[idx]
+        # for loop for branching depending on each element
         for s in lookup[current_digit]:
+            # add unique element to the subset (s)
             self.backtracking(digits, result, lookup, combinations+s, idx+1)
         return
 
