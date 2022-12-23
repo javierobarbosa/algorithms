@@ -1,6 +1,5 @@
 # The following code performs integer division
 
-
 def division (a, b):
     count = 0
     total = b
