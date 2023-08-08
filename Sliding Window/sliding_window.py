@@ -32,7 +32,7 @@ def get_max_sum(arr: List[int], k: int) -> int:
     max_sum = window_sum = start = 0
     for i in range(len(arr)):
         window_sum += arr[i]
-        if (i - start + 1) == k:
+        if (i + 1 - start) == k:
             max_sum = max(window_sum, max_sum)
             window_sum -= arr[start]
             start += 1
