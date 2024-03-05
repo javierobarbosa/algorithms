@@ -4,6 +4,7 @@ Given an array of integers representing asteroids in a row. For each asteroid, t
 and the sign represents its direction (positive meaning right, negative meaning left).
 If two asteroids meet, the smaller one will explode. If both are the same size, both will explode.
 Two asteroids moving in the same direction will never meet.
+
 """
 from typing import List
 
